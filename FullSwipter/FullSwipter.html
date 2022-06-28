@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FullSwipter</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .swiper-wraper{
+            height: 400px;
+            overflow: hidden;
+            position: relative;
+        }
+        .swiper-list{
+            height: 100%;
+            display: flex;
+        }
+        .swiper-item{
+            width: 100%;
+            flex: none;
+        }
+        .swiper-pagination{
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+        }
+        .swiper-pagination-switch{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #F2EFE6;
+            display: inline-block;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .swiper-pagination-switch.active{
+            background: #E03363;
+        }
+        .swiper-arrow{
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+            background-color: #F2EFE6;
+            text-decoration: none;
+            text-align: center;
+            line-height: 50px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0;
+            transition: all .2s ease;
+        }
+        .swiper-wraper:hover .swiper-arrow{
+            opacity: 1;;
+        }
+        .swiper-arrow-left{
+            left: 100px;
+        }
+        .swiper-arrow-right{
+            right: 100px;
+        }
+    </style>
+    <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery/jquery-1.8.0.js"></script>
+</head>
+<body>
+    <div class="swiper-wraper" id="swiper-wraper">
+        <div class="swiper-list" id="swiper-list">
+            <div class="swiper-item" style="background-color: #82A6F5;">1</div>
+            <div class="swiper-item" style="background-color: #EAF048;">2</div>
+            <div class="swiper-item" style="background-color: #9FF048;">3</div>
+            <div class="swiper-item" style="background-color: #2A5200;">4</div>
+            <div class="swiper-item" style="background-color: #F6D6FF;">5</div>
+        </div>
+        <div class="swiper-pagination">
+            <span class="swiper-pagination-switch active"></span>
+            <span class="swiper-pagination-switch"></span>
+            <span class="swiper-pagination-switch"></span>
+            <span class="swiper-pagination-switch"></span>
+            <span class="swiper-pagination-switch"></span>
+        </div>
+        <a class="swiper-arrow swiper-arrow-left" id="swiper-prev" href="javascript:;">◀</a>
+        <a class="swiper-arrow swiper-arrow-right" id="swiper-next" href="javascript:;">▶</a>
+    </div>
+    <script src="./FullSwipter.js"></script>
+</body>
+</html>
